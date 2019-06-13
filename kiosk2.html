@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible"  content="IE=EmulateIE9">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link href="css/kiosk.css" rel="stylesheet" type="text/css">
+<title>	NLG Kiosk System </title>
+</head>
+
+<body>
+
+<script language=cache runat=server>
+;count in total and per day, also set start time for this session.
+s run=$g(^outpatients("start""run"))
+s runh=$g(^outpatients("start""runh",+$h))
+s run=run+1,runh=runh+1
+s ^outpatients("start""run")=run
+s ^outpatients("start""runh")=runh
+s %session.Data("start")=$p($h,",",2)
+</script>
+
+<div style="position:absolute;right:1%;height:6%;width:35%;">
+<img src="images\nlg-logo.png" width="100%" height="100%"></img>
+</div>
+
+<div style="position:absolute;left:1%;height:5.5%;width:12%;">
+<img src="images\webv_mainlogo.png" width="100%" height="100%"></img>
+</div>
+
+<div style="position:absolute;top:6%;left:1%;height:2px;width:98%;background-color:#0072c6;">
+</div>
+
+
+
+
+
+<div class=radius10 style="position:absolute;top:8%;left:20%;height:4%;width:60%;background-color:white;border:1px solid;">
+<div class=radius10 style="position:absolute;width:10%;height:100%;background-color:green;">
+</div>
+<div align=center style="position:absolute:width:100%;height:80%;top:20%;font-size:20pt">Progress (Step 1 of 7)
+</div>
+</div>
+
+
+<div class=radius10 align=center style="position:absolute;top:17%;height:6%;width:80%;left:8%;font-size:30pt;background-color:#009933;color:white;">
+
+Please choose a language or continue in English
+
+</div>
+
+
+
+
+
+<div style="position:absolute;top:30%;left:5%;height:9%;width:12%;">
+<div style="position:absolute;top:0%;left:0%;height:80%;width:100%;">
+<a href="kiosk3.html?language=english">
+<img src="images\flags\uk.png" width="100%" height="100%">
+</a>
+</div>
+<div style="position:absolute;top:80%;left:20%;font-size:16pt">English
+</div>
+</div>
+
+
+
+
+<div style="position:absolute;top:30%;left:20%;height:9%;width:12%;">
+<div style="position:absolute;top:0%;left:0%;height:80%;width:100%;">
+<a href="kiosk3.html?language=german">
+<img src="images\flags\germany.png" width="100%" height="100%">
+</a>
+</div>
+<div style="position:absolute;top:80%;left:20%;font-size:16pt">German</div>
+</div>
+
+
+
+
+
+<div style="position:absolute;top:30%;left:35%;height:9%;width:12%;">
+<div style="position:absolute;top:0%;left:0%;height:80%;width:100%;">
+<a href="kiosk3.html?language=french">
+<img src="images\flags\france.png" width="100%" height="100%">
+</a>
+</div>
+<div style="position:absolute;top:80%;left:20%;font-size:16pt">French</div>
+</div>
+</a>
+
+
+
+
+<div style="position:absolute;top:50%;left:5%;height:9%;width:12%;">
+<div style="position:absolute;top:0%;left:0%;height:80%;width:100%;">
+<a href="kiosk3.html?language=polish">
+<img src="images\flags\poland.png" width="100%" height="100%">
+</a>
+</div>
+<div style="position:absolute;top:80%;left:20%;font-size:16pt">Polish</div>
+</div>
+</a>
+
+
+<div style="position:absolute;top:50%;left:20%;height:9%;width:12%;">
+<div style="position:absolute;top:0%;left:0%;height:80%;width:100%;">
+<a href="kiosk3.html?language=portuguese">
+<img src="images\flags\portugal.png" width="100%" height="100%">
+</a>
+</div>
+<div style="position:absolute;top:80%;left:20%;font-size:16pt">Portuguese</div>
+</div>
+</a>
+
+
+
+
+<div style="position:absolute;top:50%;left:35%;height:9%;width:12%;">
+<div style="position:absolute;top:0%;left:0%;height:80%;width:100%;">
+<a href="kiosk3.html?language=spanish">
+<img src="images\flags\spain.png" width="100%" height="100%">
+</a>
+</div>
+<div style="position:absolute;top:80%;left:20%;font-size:16pt">Spanish</div>
+</div>
+</a>
+
+
+
+<a href="kiosk3.html?language=english">
+<div class=radius20 style="position:absolute;top:30%;right:1%;height:40%;width:40%;background-color:#0072c6;color:white;font:48pt Arial Narrow Bold;border:1px solid black;">
+<div align=center style="position:absolute;top:5%;right:5%;height:100%;width:100%">
+Touch Screen <br><font color="#cc0000">Here<font color="#ffffff"><br> To continue <br>In English
+</div>
+</div>
+</a>
+
+
+</div>
+
+
+
+<a href="kiosk1.html">
+<div class=radius5 align=center style="z-index:-4;position:absolute;bottom:1%;left:1%;width:33%;height:5%;background-color:#0072c6;font: 26pt Arial Bold;color:white;border:3px solid black;">
+Previous Screen
+</div>
+</a>
+
+<a href="kiosk1.html">
+<div class=radius5 align=center style="z-index:-4;position:absolute;bottom:1%;left:34%;width:33%;height:5%;background-color:#0072c6;font: 26pt Arial Bold;color:white;border:3px solid black;">
+Start Again
+</div>
+</a>
+
+<a href="kioskhelp.html">
+<div class=radius5 align=center style="z-index:-4;position:absolute;bottom:1%;left:67%;width:32%;height:5%;background-color:#0072c6;font: 26pt Arial Bold;color:white;border:3px solid black;">
+Other Information
+</div>
+</a>
+
+
+</body>
+</html>
